@@ -1,0 +1,79 @@
+These are the accompanying files for:
+
+COMPUTERS & GEOSCIENCES
+MS. REF. NO.: 
+	CAGEO-D-07-00054
+TITLE: 
+	A General Method for Calculating Co-Seismic Gravity Changes in
+	Complex Fault Systems
+AUTHORS:
+	T.J. Hayes, K.F. Tiampo, J.B. Rundle, J. Fernandez
+
+NOTE: Added Sumatra directory, October, 2007 
+
+HOW TO USE GRAV90:
+---------------------------------------------------
+
+(1) Read the information files in the GRAV_EXAMPLES 
+    directory. I have tried to comment throughout all
+    all Fortran90 and IDL codes to facilitate your own
+    modifications. 
+
+
+(2) Copy the Fortran90 routines to the ALASKA and BIGBEAR
+    directories. This is because as some files are 
+    automatically overwritten, you want to run the code
+    in a dedicated directory with the necessary data files.
+
+
+(3) Compile the Fortran90 routines as ($=the prompt):
+
+$ gfortran -o GRAV_GREEN GRAV_GREEN.f90
+$ gfortran -o GRAVITY GRAVITY.f90
+
+Or use the Fortran90 compiler of your choice.
+
+
+(4) Make sure all the necessary data files are present.
+    The user is responsible for creating the following:
+	- a fault medium file (See MEDIUM_INFO.d
+	  for more information).
+	- a fault segment geometry file (See FAULT_SEG_INFO.d
+	  for more details). This usually takes the longest
+	  to produce for your system of interest.
+	- a fault slip-history file (See FAULT_SLP_HIST.d
+	  for more information). Example "MAKE_HIST"
+	  F77 files are included. The ALASKA one demonstrates
+	  how to create a history file for a simple slip history,
+	  and the BIGBEAR one shows a more complicated system
+	  with multiple slips over several years. 
+
+
+(5) Enter the directory of the data you wish to examine and execute
+    the Fortran90 programs in the following sequence ($=the prompt):
+	
+	FIRST RUN:
+
+	$ ./GRAV_GREEN <hit return>
+	Answer all queries
+
+	THEN RUN:
+
+	$ ./GRAVITY <hit return>
+	Answer all queries. 
+	
+
+(6) To visualize the data, you can use the IDL files found in the 
+    GRAV_IDL directory. You only need to run GRAVITY90_VIEW.pro
+    to visualize the data as it calls the rest of the files 
+    internally. You run the program as follows ($=the prompt):
+	
+	$ idl <hit return>
+	$ .r GRAVITY90_VIEW.pro <hit return>
+
+	And answer the on-screen queries. 
+	
+	IMPORTANT: ALL OF THE DATA FILES (except the gravity Green's
+		   values) MUST BE PRESENT IN THE DIRECOTRY IN WHICH
+		   GRAVITY90_VIEW IS RUN!!!
+

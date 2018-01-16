@@ -1,0 +1,7 @@
+Files:
+
+bigbear_seq2_hist.d  	= history file
+bigbear_seq2_kav.d   	= fault segment file
+bigbear_seq2_med.d 	= medium information file
+gravity90.dat  		= example output from GRAVITY.f90
+MAKE_HIST_BEAR.f	= example fault history generator

@@ -1,0 +1,28 @@
+The files written by Tyler Hayes are:
+GRAVITY90_VIEW.pro
+latlon_conv.pro
+
+However, these files call upon some other routines written by other people.
+These are listed below. 
+
+DAVID FANNING:
+colorbar.pro
+number_formatter.pro  
+
+Visit http://www.dfanning.com/
+
+
+MATT CRAIG's TeXtoIDL:
+matchdelim.pro
+nexttok.pro
+showtex.pro
+strcnt.pro
+str_token.pro
+strtrans.pro
+sub_sup_idl.pro
+textable.pro
+textoidl.pro
+translate_sub_super.pro
+
+Visit http://physweb.mnstate.edu/mcraig/TeXtoIDL/
+

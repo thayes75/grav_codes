@@ -1,0 +1,7 @@
+Files:
+
+sumatra_hist.d  	= history file
+sumatra_seg.d   	= fault segment file
+sumatra_med.d	 	= medium information file
+gravity90.dat  		= example output from GRAVITY.f90
+MAKE_HIST_SUMA.f	= example fault history generator

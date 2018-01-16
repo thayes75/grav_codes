@@ -1,0 +1,7 @@
+Files:
+
+alaska_1964_hist.d  	= history file
+alaska_1964_seg.d  	= fault segment file
+alaska_1964_med.d 	= medium information file
+gravity90.dat		= example output from GRAVITY.f90
+MAKE_HIST_ALASKA.f	= example fault history generator
